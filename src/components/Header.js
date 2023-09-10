@@ -11,7 +11,7 @@ const Header = () => {
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
-  console.log("user not found",user);
+  
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
