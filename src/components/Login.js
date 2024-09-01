@@ -80,38 +80,41 @@ const Login = () => {
 
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="w-[30%] sm:w-3/12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-8 bg-black text-white rounded-lg bg-opacity-80"
+        className=" max-w-[25rem] absolute cs:h-[80vh] customScreen:h-[60%] laptop:h-[60vh]  cs:w-[80%] overflow-y-scroll customScreen:w-[60%]  p-8 bg-black text-white rounded-lg bg-opacity-80  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/3"
       >
-        <h1 className="font-bold text-3xl text-center py-4">
+        <h1 className="font-bold text-3xl text-center cs:text-xl  py-4">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h1>
+        <div>
+
+        </div>
 
         {!isSignInForm && (
           <input
             ref={name}
             type="text"
             placeholder="Full Name"
-            className="p-4 my-4 w-full bg-gray-700"
+            className="p-4  w-full bg-gray-700"
           />
         )}
         <input
           ref={email}
           type="text"
           placeholder="Email Address"
-          className="p-4 my-4 w-full bg-gray-700"
+          className="p-4 my-6 w-full bg-gray-700"
         />
         <input
           ref={password}
           type="password"
           placeholder="Password"
-          className="p-4 my-4 w-full bg-gray-700"
+          className="p-4 w-full bg-gray-700"
         />
 
         <p className="text-red-500 font-bold text-lg py-2 text-center">
           {errorMessage}
         </p>
         <button
-          className="p-4 my-6 bg-red-700 w-full rounded-lg"
+          className="p-4 bg-red-700 w-full rounded-lg"
           onClick={handleButtonClick}
         >
           {isSignInForm ? "Sign In" : "Sign Up"}
